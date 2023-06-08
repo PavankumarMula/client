@@ -1,0 +1,30 @@
+.product-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 200px;
+  padding: 10px;
+  border: 2px solid;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.product-form label {
+  padding: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.product-form input {
+  padding: 5px;
+}
+.product-form #description {
+  padding-bottom: 80px;
+}
+.product-form button {
+  width: 100px;
+  margin-top: 25px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: lightcoral;
+}
