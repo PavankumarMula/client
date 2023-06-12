@@ -1,47 +1,24 @@
 import React from "react";
-import productImage from "../assets/item.jpg";
-import { Link } from "react-router-dom";
+import "./ProductCard.css";
+import productImage from "../assets/item.png";
+import { useNavigate } from "react-router-dom";
 
-const ProductCard = ({ id,title, description, price }) => {
+const ProductCard = ({ title, price, id }) => {
+  const navigate = useNavigate();
+  const clickHandler = () => {
+    navigate(`/products/${id}`);
+  };
+
   return (
-    <>
-      <div
-        style={{
-          height: "300px",
-          width: "200px",
-          border: "2px solid",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "10px",
-          flexDirection: "column",
-          marginTop:'20px',
-          fontFamily:'verdana'
-        }}
-      >
-        <img
-          src={productImage}
-          alt="product"
-          style={{ width: "100%", height: "80%", objectFit: "cover" }}
-        ></img>
-        {title}
-        <br />
-        {description}
-        <br />
-        {price}
-        <br />
-        <Link
-        to={`/products/${id}`}
-        style={{
-          backgroundColor: "#f5f5f5",
-          color: "black",
-          textDecoration: "none",
-          borderRadius: "4px",
-          fontWeight: "bold",
-        }}
-      >Details</Link>
-      </div>
-    </>
+    <div className="product-card" onClick={clickHandler}>
+      <img
+        src={productImage}
+        alt="pic"
+        style={{ width: "100%", height: "150px" }}
+      />
+      <p>Title: {title}</p>
+      <p>Price: {price}</p>
+    </div>
   );
 };
 

@@ -1,18 +1,19 @@
 import React from "react";
+import { Routes, Route } from 'react-router-dom';
+import AddBook from "./components/AddBook";
+import "./App.css";
 import NavBar from "./components/NavBar";
-import { Route,Routes} from "react-router";
-import products from "./components/products";
-import addproduct from "./components/addproduct";
-import HomeShop from "./components/HomeShop";
+import Home from "./components/Home";
+import ProductView from "./components/ProductView";
 
 const App = () => {
   return (
     <>
       <NavBar />
       <Routes>
-        <Route path="/"exact Component={HomeShop}></Route>
-        <Route path="/add-product" Component={addproduct}/>
-        <Route path="/products" Component={products}/>
+        <Route path="/addproduct" element={<AddBook />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/products/:id" element={<ProductView />} />
       </Routes>
     </>
   );

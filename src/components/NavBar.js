@@ -1,69 +1,20 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "./NavBar.css";
 
 const NavBar = () => {
   return (
     <>
-      <ul
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          backgroundColor: "whitesmoke",
-          height: "48px",
-          listStyle: "none",
-          gap: "40px",
-          textDecoration: "none",
-        }}
-      >
-        <li
-          style={{
-            color: "black",
-            textDecoration: "none",
-            marginTop: "10px",
-            fontFamily: "verdana",
-          }}
-        >
-          <NavLink to="/" style={{ textDecoration: "none" }}>
-            Shop
-          </NavLink>
-        </li>
-        <li
-          style={{
-            color: "black",
-            textDecoration: "none",
-            marginTop: "10px",
-            fontFamily: "verdana",
-          }}
-        >
-          <NavLink to="/products" style={{ textDecoration: "none" }}>
-            products
-          </NavLink>
-        </li>
-        <li
-          style={{
-            color: "black",
-            textDecoration: "none",
-            marginTop: "10px",
-            fontFamily: "verdana",
-          }}
-        >
-          <NavLink to="/add-product" style={{ textDecoration: "none" }}>
-            add-product
-          </NavLink>
-        </li>
-        <li
-          style={{
-            color: "black",
-            textDecoration: "none",
-            marginTop: "10px",
-            fontFamily: "verdana",
-          }}
-        >
-          <NavLink to="/cart" style={{ textDecoration: "none" }}>
-            Cart
-          </NavLink>
-        </li>
-      </ul>
+      <div className="nav-container">
+        <ul className="list">
+          <li>
+            <Link to="/home"  className="list-item">Home</Link>
+          </li>
+          <li >
+            <Link to="/addproduct"  className="list-item">Add Product</Link>
+          </li>
+        </ul>
+      </div>
     </>
   );
 };

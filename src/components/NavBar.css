@@ -1,0 +1,19 @@
+.nav-container{
+    height: 50px;
+    background-color: whitesmoke;
+    padding: 10px;
+    
+    
+}
+.list{
+    list-style: none;
+    column-gap: 50px;
+    display: flex;
+    text-decoration: none;
+}
+.list-item{
+    text-decoration: none;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+}
